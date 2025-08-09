@@ -51,7 +51,10 @@ const ContactSection = () => {
             <div 
               key={index}
               className="text-center glass p-6 rounded-lg hover:glass-accent transition-all duration-300 animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ 
+                animationDelay: `${index * 150}ms`,
+                animationFillMode: 'both'
+              }}
             >
               <div className="text-accent mb-4 flex justify-center">
                 {item.icon}
@@ -75,7 +78,7 @@ const ContactSection = () => {
         {/* Map placeholder and quick contact */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Map area */}
-          <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <div className="animate-fade-up" style={{ animationDelay: '400ms', animationFillMode: 'both' }}>
             <div className="glass p-8 rounded-2xl h-full">
               <h3 className="text-xl font-playfair font-semibold text-primary mb-6">
                 Nuestra Cobertura
@@ -101,7 +104,7 @@ const ContactSection = () => {
           </div>
 
           {/* Quick contact */}
-          <div className="animate-fade-up" style={{ animationDelay: '0.6s' }}>
+          <div className="animate-fade-up" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
             <div className="glass p-8 rounded-2xl">
               <h3 className="text-xl font-playfair font-semibold text-primary mb-6">
                 Contacto Rápido
