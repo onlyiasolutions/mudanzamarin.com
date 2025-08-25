@@ -10,36 +10,44 @@ import { HelpCircle } from 'lucide-react';
 const FAQSection = () => {
   const faqs = [
     {
-      question: "¿Cuánto tiempo tardan en realizar una mudanza?",
-      answer: "El tiempo depende de la distancia y el volumen. Las mudanzas locales suelen completarse en 1 día, las nacionales entre 1-3 días, y las internacionales entre 3-7 días laborables."
+      question: "¿Qué tipo de mudanzas realizan?",
+      answer: "Realizamos mudanzas particulares, de oficinas, empresas y traslados internacionales. Nos adaptamos al tipo de carga, destino y necesidades específicas de cada cliente."
     },
     {
-      question: "¿Qué incluye el embalaje profesional?",
-      answer: "Incluye cajas de cartón reforzado, papel de burbujas, film protector, mantas acolchadas para muebles, y material especializado para objetos frágiles. También incluimos el desmontaje y montaje de muebles."
+      question: "¿Cómo solicito un presupuesto?",
+      answer: "Puedes contactarnos por teléfono, correo electrónico o a través del formulario en nuestra web. Solo necesitamos algunos datos básicos para enviarte un presupuesto claro y sin compromiso."
     },
     {
-      question: "¿Están aseguradas mis pertenencias durante el traslado?",
-      answer: "Sí, todas nuestras mudanzas incluyen seguro básico de transporte. También ofrecemos seguros adicionales con cobertura ampliada para objetos de alto valor."
+      question: "¿Trabajan en toda España?",
+      answer: "Sí, cubrimos toda España, desde grandes ciudades hasta pequeñas localidades. Hacemos mudanzas locales, provinciales y entre comunidades autónomas."
     },
     {
-      question: "¿Cómo calculan el precio de la mudanza?",
-      answer: "El precio se calcula según el volumen (m³), la distancia, servicios adicionales (embalaje, desmontaje), y la complejidad del acceso. Ofrecemos presupuestos gratuitos sin compromiso."
+      question: "¿También hacen mudanzas fuera de España?",
+      answer: "Sí, organizamos traslados desde España a cualquier país de la Unión Europea, y viceversa. También realizamos rutas combinadas para optimizar costes."
     },
     {
-      question: "¿Trabajan en fines de semana y festivos?",
-      answer: "Sí, trabajamos fines de semana y algunos festivos (consultar disponibilidad). Para mudanzas en estos días se aplica un pequeño suplemento."
+      question: "¿Qué incluye el servicio de mudanza?",
+      answer: "Incluye transporte seguro, carga y descarga, desmontaje y montaje de muebles, embalaje profesional de objetos frágiles y seguimiento durante todo el proceso."
     },
     {
-      question: "¿Qué documentación necesito para mudanzas internacionales?",
-      answer: "Para mudanzas en Europa necesitarás DNI/Pasaporte, justificante de residencia en destino, e inventario detallado. Nosotros gestionamos toda la documentación aduanera."
+      question: "¿Qué pasa si tengo muebles delicados o frágiles?",
+      answer: "Contamos con materiales de protección adecuados y personal con experiencia en el manejo de objetos delicados, obras de arte, cristalería o tecnología."
     },
     {
-      question: "¿Puedo hacer un seguimiento de mi mudanza?",
-      answer: "Sí, proporcionamos seguimiento en tiempo real mediante WhatsApp y llamadas telefónicas. Siempre sabrás dónde están tus pertenencias."
+      question: "¿Puedo elegir la fecha de la mudanza?",
+      answer: "Sí. Ofrecemos flexibilidad total de fechas y horarios, y coordinamos contigo para adaptarnos a tu agenda."
     },
     {
-      question: "¿Qué forma de pago aceptan?",
-      answer: "Aceptamos transferencia bancaria, efectivo, y tarjeta de crédito/débito. El pago se realiza normalmente 50% al inicio y 50% a la entrega."
+      question: "¿Cuánto tarda una mudanza Nacional y Europea?",
+      answer: "Depende del destino y volumen, pero te damos un cronograma claro desde el principio. Siempre priorizamos cumplir los plazos acordados."
+    },
+    {
+      question: "¿Qué garantías ofrecen durante el traslado?",
+      answer: "Todos nuestros servicios están cubiertos por seguros y trabajamos bajo protocolos de seguridad que minimizan cualquier riesgo. Tu tranquilidad es lo primero."
+    },
+    {
+      question: "¿Qué diferencia a Mudanzas Marín de otras empresas?",
+      answer: "Nuestra experiencia de más de 20 años, la atención cercana, la adaptabilidad a cada caso y la cobertura nacional y europea nos convierten en un aliado fiable para cualquier mudanza."
     }
   ];
 
