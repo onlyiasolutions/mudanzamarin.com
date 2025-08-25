@@ -13,8 +13,8 @@ const ContactSection = () => {
     {
       icon: <Mail size={24} />,
       title: "Email",
-      content: "info@mudanzamarin.eu",
-      action: "mailto:info@mudanzamarin.eu",
+      content: "info@mudanzamarin.com",
+      action: "mailto:info@mudanzamarin.com",
       description: "Respuesta en menos de 24h"
     },
     {
@@ -130,7 +130,7 @@ const ContactSection = () => {
                 </a>
                 
                 <a 
-                  href="mailto:info@mudanzamarin.eu?subject=Solicitud%20de%20presupuesto&body=Hola,%0D%0A%0D%0AMe%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20para%20una%20mudanza.%0D%0A%0D%0ATipo%20de%20mudanza:%0D%0AOrigen:%0D%0ADestino:%0D%0AFecha%20aproximada:%0D%0A%0D%0AGracias"
+                  href="mailto:info@mudanzamarin.com?subject=Solicitud%20de%20presupuesto&body=Hola,%0D%0A%0D%0AMe%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20para%20una%20mudanza.%0D%0A%0D%0ATipo%20de%20mudanza:%0D%0AOrigen:%0D%0ADestino:%0D%0AFecha%20aproximada:%0D%0A%0D%0AGracias"
                   className="block w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 text-center group"
                 >
                   <Mail className="inline-block mr-3 group-hover:scale-110 transition-transform" size={20} />

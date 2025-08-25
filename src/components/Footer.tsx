@@ -51,7 +51,7 @@ const Footer = () => {
                 <Phone size={20} />
               </a>
               <a 
-                href="mailto:info@mudanzamarin.eu"
+                href="mailto:info@mudanzamarin.com"
                 className="text-accent hover:text-accent/80 transition-colors"
                 aria-label="Email"
               >
@@ -108,8 +108,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Mail size={16} className="text-accent mt-1 flex-shrink-0" />
                 <div>
-                  <a href="mailto:info@mudanzamarin.eu" className="text-sm hover:text-accent transition-colors">
-                    info@mudanzamarin.eu
+                  <a href="mailto:info@mudanzamarin.com" className="text-sm hover:text-accent transition-colors">
+                    info@mudanzamarin.com
                   </a>
                   <div className="text-xs opacity-75">Respuesta &lt; 24h</div>
                 </div>

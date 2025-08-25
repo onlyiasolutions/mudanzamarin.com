@@ -42,9 +42,9 @@ const Navigation = () => {
               <Phone size={14} />
               <span>642 431 192</span>
             </a>
-            <a href="mailto:info@mudanzamarin.eu" className="flex items-center space-x-1 hover:text-accent transition-colors">
+            <a href="mailto:info@mudanzamarin.com" className="flex items-center space-x-1 hover:text-accent transition-colors">
               <Mail size={14} />
-              <span className="hidden sm:inline">info@mudanzamarin.eu</span>
+              <span className="hidden sm:inline">info@mudanzamarin.com</span>
             </a>
           </div>
         </div>

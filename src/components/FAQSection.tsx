@@ -93,7 +93,7 @@ const FAQSection = () => {
                 📞 Llamar ahora
               </a>
               <a 
-                href="mailto:info@mudanzamarin.eu"
+                href="mailto:info@mudanzamarin.com"
                 className="btn-hero inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 ✉️ Enviar email
