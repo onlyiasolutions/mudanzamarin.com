@@ -41,28 +41,46 @@ const QuoteForm = () => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://hook.eu2.make.com/sfhelhgccn757d8isk64f6hucjx0hbiv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "¡Solicitud enviada!",
+          description: "Te contactaremos en menos de 24 horas con tu presupuesto personalizado",
+          duration: 5000,
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          moveType: '',
+          origin: '',
+          destination: '',
+          date: '',
+          details: '',
+          privacy: false
+        });
+      } else {
+        throw new Error('Error al enviar la solicitud');
+      }
+    } catch (error) {
       toast({
-        title: "¡Solicitud enviada!",
-        description: "Te contactaremos en menos de 24 horas con tu presupuesto personalizado",
-        duration: 5000,
+        title: "Error",
+        description: "No se pudo enviar la solicitud. Por favor, inténtalo de nuevo.",
+        variant: "destructive"
       });
+    } finally {
       setIsSubmitting(false);
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        moveType: '',
-        origin: '',
-        destination: '',
-        date: '',
-        details: '',
-        privacy: false
-      });
-    }, 2000);
+    }
   };
 
   return (
