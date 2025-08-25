@@ -17,11 +17,12 @@ const WhatsAppButton = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const phoneNumber = "34642431192";
   const whatsappMessage = encodeURIComponent(
     "Hola! Me gustaría solicitar un presupuesto para una mudanza. ¿Pueden ayudarme?"
   );
 
-  const whatsappUrl = `https://wa.me/34642431192?text=${whatsappMessage}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${whatsappMessage}`;
 
   if (!isVisible) return null;
 
