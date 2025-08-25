@@ -1,34 +1,44 @@
 import React from 'react';
-import { Globe, FileText, Truck, Phone } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import europeImage from '@/assets/europe-map.jpg';
 
 const EuropeSection = () => {
-  const countries = [
-    "🇫🇷 Francia", "🇩🇪 Alemania", "🇮🇹 Italia", "🇵🇹 Portugal",
-    "🇳🇱 Países Bajos", "🇧🇪 Bélgica", "🇨🇭 Suiza", "🇦🇹 Austria",
-    "🇱🇺 Luxemburgo", "🇬🇧 Reino Unido", "🇮🇪 Irlanda", "🇩🇰 Dinamarca"
+  const serviceTypes = [
+    {
+      emoji: "🔹",
+      title: "Residencias particulares",
+      description: "Traslado completo o parcial de hogares dentro del espacio europeo."
+    },
+    {
+      emoji: "🔹",
+      title: "Mudanzas de oficinas y empresas",
+      description: "Organización logística para traslados empresariales entre países."
+    },
+    {
+      emoji: "🔹",
+      title: "Mudanzas especiales o combinadas",
+      description: "Coordinamos rutas y fechas para aprovechar desplazamientos programados y optimizar costes."
+    }
   ];
 
   const services = [
     {
-      icon: <Globe size={32} />,
-      title: "Rutas habituales",
-      description: "Conexiones regulares con principales ciudades europeas"
+      title: "Transporte por carretera a cualquier país de Europa."
     },
     {
-      icon: <FileText size={32} />,
-      title: "Gestión de trámites",
-      description: "Nos ocupamos de toda la documentación aduanera"
+      title: "Transporte marítimo si el destino o volumen lo requiere."
     },
     {
-      icon: <Truck size={32} />,
-      title: "Transporte directo",
-      description: "Sin transbordos, directo a tu destino"
+      title: "Embalaje especializado para viajes largos y objetos delicados."
     },
     {
-      icon: <Phone size={32} />,
-      title: "Seguimiento 24/7",
-      description: "Control total durante todo el trayecto"
+      title: "Documentación y normativa europea, gestionada por nuestro equipo."
+    },
+    {
+      title: "Asistencia personalizada en todo momento, estés donde estés."
+    },
+    {
+      title: "Soluciones flexibles adaptadas a distancia, volumen y urgencia."
     }
   ];
 
@@ -37,12 +47,17 @@ const EuropeSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-primary mb-6">
-            Mudanzas en Europa
+          <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-primary mb-4">
+            ¿Te mudas a otro país europeo?
           </h2>
+          <h3 className="text-2xl md:text-3xl font-playfair font-semibold text-accent mb-6">
+            Te acompañamos en cada kilómetro
+          </h3>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Conectamos España con toda Europa. Nuestras rutas establecidas y nuestra experiencia 
-            en trámites internacionales garantizan mudanzas sin complicaciones por todo el continente.
+            En Mudanzas Marín EU contamos con una amplia trayectoria gestionando mudanzas internacionales 
+            desde España a cualquier país de la Unión Europea, y viceversa. Ya sea por motivos personales, 
+            laborales o empresariales, nos encargamos de todo el proceso para que tu mudanza al extranjero 
+            sea segura, eficiente y sin complicaciones.
           </p>
         </div>
 
@@ -59,19 +74,23 @@ const EuropeSection = () => {
             </div>
           </div>
 
-          {/* Countries grid */}
+          {/* Service Types */}
           <div className="animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-playfair font-semibold text-primary mb-6">
-              Países que cubrimos
+              Tipos de mudanzas
             </h3>
-            <div className="grid grid-cols-2 gap-3">
-              {countries.map((country, index) => (
+            <div className="space-y-6">
+              {serviceTypes.map((type, index) => (
                 <div 
                   key={index}
-                  className="glass p-3 rounded-lg text-center text-sm font-medium hover:glass-accent transition-all duration-300 cursor-pointer"
-                  style={{ animationDelay: `${index * 0.05}s` }}
+                  className="glass p-4 rounded-lg hover:glass-accent transition-all duration-300"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {country}
+                  <h4 className="font-semibold text-primary mb-2 flex items-center">
+                    <span className="mr-2">{type.emoji}</span>
+                    {type.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground ml-6">{type.description}</p>
                 </div>
               ))}
             </div>
@@ -79,20 +98,24 @@ const EuropeSection = () => {
         </div>
 
         {/* Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="text-center glass p-6 rounded-lg hover:glass-accent transition-all duration-300 animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-accent mb-4 flex justify-center">
-                {service.icon}
+        <div className="mb-16">
+          <h3 className="text-2xl font-playfair font-semibold text-primary mb-8 text-center">Servicios</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {services.map((service, index) => (
+              <div 
+                key={index}
+                className="flex items-start space-x-3 glass p-4 rounded-lg hover:glass-accent transition-all duration-300 animate-fade-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="text-accent mt-1">
+                  <CheckCircle size={20} />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">{service.title}</p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-primary mb-3">{service.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
