@@ -159,9 +159,9 @@ const QuoteForm = () => {
                     <SelectValue placeholder="Selecciona el tipo" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="local">Local (misma ciudad)</SelectItem>
-                    <SelectItem value="nacional">Nacional (España)</SelectItem>
-                    <SelectItem value="internacional">Internacional (Europa)</SelectItem>
+                    <SelectItem value="local">Mudanza local, dentro de la misma ciudad en España</SelectItem>
+                    <SelectItem value="nacional">Mudanza nacional de una ciudad a otra en España</SelectItem>
+                    <SelectItem value="internacional">Mudanza Internacional Europa</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -169,7 +169,7 @@ const QuoteForm = () => {
               {/* Origin */}
               <div>
                 <Label htmlFor="origin" className="text-primary font-medium">
-                  Dirección de origen *
+                  Dirección de origen completa *
                 </Label>
                 <Input
                   id="origin"
@@ -177,7 +177,7 @@ const QuoteForm = () => {
                   value={formData.origin}
                   onChange={(e) => handleInputChange('origin', e.target.value)}
                   className="mt-2"
-                  placeholder="Ciudad, provincia, país"
+                  placeholder="Calle, número, ciudad, código postal, país"
                   required
                 />
               </div>
@@ -193,7 +193,7 @@ const QuoteForm = () => {
                   value={formData.destination}
                   onChange={(e) => handleInputChange('destination', e.target.value)}
                   className="mt-2"
-                  placeholder="Ciudad, provincia, país"
+                  placeholder="Calle, número, ciudad, código postal, país"
                   required
                 />
               </div>
@@ -202,7 +202,7 @@ const QuoteForm = () => {
             {/* Date */}
             <div>
               <Label htmlFor="date" className="text-primary font-medium">
-                Fecha deseada
+                Fecha deseada para la mudanza
               </Label>
               <Input
                 id="date"
@@ -217,7 +217,7 @@ const QuoteForm = () => {
             {/* Details */}
             <div>
               <Label htmlFor="details" className="text-primary font-medium">
-                Detalles adicionales
+                ¿Te gustaría facilitarnos más detalles?
               </Label>
               <Textarea
                 id="details"
