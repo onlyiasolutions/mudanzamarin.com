@@ -134,14 +134,17 @@ const Footer = () => {
             </div>
             
             <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">
-              <a href="#" className="opacity-75 hover:opacity-100 hover:text-accent transition-colors">
+              <a href="/privacidad" className="opacity-75 hover:opacity-100 hover:text-accent transition-colors">
                 Política de Privacidad
               </a>
-              <a href="#" className="opacity-75 hover:opacity-100 hover:text-accent transition-colors">
+              <a href="/terminos" className="opacity-75 hover:opacity-100 hover:text-accent transition-colors">
                 Términos de Servicio
               </a>
-              <a href="#" className="opacity-75 hover:opacity-100 hover:text-accent transition-colors">
+              <a href="/aviso-legal" className="opacity-75 hover:opacity-100 hover:text-accent transition-colors">
                 Aviso Legal
+              </a>
+              <a href="/cookies" className="opacity-75 hover:opacity-100 hover:text-accent transition-colors">
+                Cookies
               </a>
             </div>
           </div>

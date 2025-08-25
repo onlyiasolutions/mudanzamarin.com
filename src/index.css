@@ -106,7 +106,7 @@ All colors MUST be HSL.
   
   .glass-accent {
     background: linear-gradient(135deg, hsla(var(--golden-yellow), 0.15), hsla(var(--golden-yellow), 0.05));
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(16px);
     border: 1px solid hsla(var(--golden-yellow), 0.2);
     box-shadow: var(--shadow-accent);
   }
@@ -179,3 +179,5 @@ All colors MUST be HSL.
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+
+/* Cookie banner specific styles removed - now using main .glass-accent class */
