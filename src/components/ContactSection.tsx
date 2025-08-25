@@ -60,16 +60,16 @@ const ContactSection = () => {
                 {item.icon}
               </div>
               <h3 className="font-semibold text-primary mb-2">{item.title}</h3>
-              {item.action.startsWith('#') ? (
+               {item.action.startsWith('#') ? (
                 <div className="text-lg font-medium text-primary mb-2">{item.content}</div>
-              ) : (
+               ) : (
                 <a 
                   href={item.action}
-                  className="text-lg font-medium text-primary hover:text-accent transition-colors mb-2 block"
+                  className="text-lg font-medium text-primary hover:text-accent transition-colors mb-2 block break-all"
                 >
                   {item.content}
                 </a>
-              )}
+               )}
               <p className="text-sm text-muted-foreground">{item.description}</p>
             </div>
           ))}
