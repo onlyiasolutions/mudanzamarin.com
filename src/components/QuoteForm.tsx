@@ -13,6 +13,7 @@ const QuoteForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
+    lastName: '',
     email: '',
     phone: '',
     moveType: '',
@@ -29,6 +30,15 @@ const QuoteForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.name.trim() || !formData.lastName.trim()) {
+      toast({
+        title: "Falta información",
+        description: "Nombre y apellidos son obligatorios",
+        variant: "destructive"
+      });
+      return;
+    }
     
     if (!formData.privacy) {
       toast({
@@ -39,15 +49,35 @@ const QuoteForm = () => {
       return;
     }
 
+    if (formData.moveType === '') {
+      toast({
+        title: "Falta información",
+        description: "Selecciona el tipo de mudanza",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
     try {
+      const payload = {
+        ...formData,
+        name: formData.name.trim(),
+        lastName: formData.lastName.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        origin: formData.origin.trim(),
+        destination: formData.destination.trim(),
+        details: (formData.details || '').trim()
+      };
+
       const response = await fetch('https://hook.eu2.make.com/sfhelhgccn757d8isk64f6hucjx0hbiv', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
@@ -60,6 +90,7 @@ const QuoteForm = () => {
         // Reset form
         setFormData({
           name: '',
+          lastName: '',
           email: '',
           phone: '',
           moveType: '',
@@ -100,20 +131,41 @@ const QuoteForm = () => {
 
         <div className="glass p-8 rounded-2xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
           <form onSubmit={handleSubmit} className="space-y-6">
+            <h2 className="sr-only">Form v2</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}
               <div>
                 <Label htmlFor="name" className="text-primary font-medium">
-                  Nombre completo *
+                  Nombre *
                 </Label>
                 <Input
                   id="name"
+                  name="name"
                   type="text"
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   className="mt-2"
-                  placeholder="Tu nombre completo"
+                  placeholder="Tu nombre"
                   required
+                  aria-required={true}
+                />
+              </div>
+
+              {/* Last Name */}
+              <div>
+                <Label htmlFor="lastName" className="text-primary font-medium">
+                  Apellidos *
+                </Label>
+                <Input
+                  id="lastName"
+                  name="lastName"
+                  type="text"
+                  value={formData.lastName}
+                  onChange={(e) => handleInputChange('lastName', e.target.value)}
+                  className="mt-2"
+                  placeholder="Tus apellidos"
+                  required
+                  aria-required={true}
                 />
               </div>
 
@@ -124,12 +176,14 @@ const QuoteForm = () => {
                 </Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className="mt-2"
                   placeholder="tu@email.com"
                   required
+                  aria-required={true}
                 />
               </div>
 
@@ -140,12 +194,16 @@ const QuoteForm = () => {
                 </Label>
                 <Input
                   id="phone"
+                  name="phone"
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   className="mt-2"
                   placeholder="600 123 456"
                   required
+                  inputMode="tel"
+                  pattern="[0-9+\s-]{6,}"
+                  aria-required={true}
                 />
               </div>
 
@@ -155,8 +213,8 @@ const QuoteForm = () => {
                   Tipo de mudanza *
                 </Label>
                 <Select value={formData.moveType} onValueChange={(value) => handleInputChange('moveType', value)}>
-                  <SelectTrigger className="mt-2">
-                    <SelectValue placeholder="Selecciona el tipo" />
+                  <SelectTrigger className="mt-2" aria-required={true}>
+                    <SelectValue placeholder="Selecciona el tipo *" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="local">Mudanza local, dentro de la misma ciudad en España</SelectItem>
@@ -173,12 +231,14 @@ const QuoteForm = () => {
                 </Label>
                 <Input
                   id="origin"
+                  name="origin"
                   type="text"
                   value={formData.origin}
                   onChange={(e) => handleInputChange('origin', e.target.value)}
                   className="mt-2"
                   placeholder="Calle, número, ciudad, código postal, país"
                   required
+                  aria-required={true}
                 />
               </div>
 
@@ -189,12 +249,14 @@ const QuoteForm = () => {
                 </Label>
                 <Input
                   id="destination"
+                  name="destination"
                   type="text"
                   value={formData.destination}
                   onChange={(e) => handleInputChange('destination', e.target.value)}
                   className="mt-2"
                   placeholder="Calle, número, ciudad, código postal, país"
                   required
+                  aria-required={true}
                 />
               </div>
             </div>
@@ -206,6 +268,7 @@ const QuoteForm = () => {
               </Label>
               <Input
                 id="date"
+                name="date"
                 type="date"
                 value={formData.date}
                 onChange={(e) => handleInputChange('date', e.target.value)}
@@ -221,6 +284,7 @@ const QuoteForm = () => {
               </Label>
               <Textarea
                 id="details"
+                name="details"
                 value={formData.details}
                 onChange={(e) => handleInputChange('details', e.target.value)}
                 className="mt-2"
