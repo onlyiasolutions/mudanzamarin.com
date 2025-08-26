@@ -20,11 +20,26 @@ const Legal = () => {
                 En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, le informamos de lo siguiente:
               </p>
               <ul className="list-disc ml-6 mb-4">
-                <li><strong>Denominación social:</strong> Mudanzas Marín EU</li>
-                <li><strong>Actividad:</strong> Servicios de mudanzas nacionales e internacionales</li>
-                <li><strong>Email:</strong> info@mudanzamarin.com</li>
-                <li><strong>Teléfono:</strong> 642 431 192</li>
-                <li><strong>Sitio web:</strong> mudanzamarin.eu</li>
+                <li>
+                  <strong>Denominación social:</strong>{' '}
+                  <a href="/#inicio" className="text-primary underline">Mudanzas Marín EU</a>
+                </li>
+                <li>
+                  <strong>Actividad:</strong>{' '}
+                  <a href="/#espana" className="text-primary underline">Servicios de mudanzas nacionales e internacionales</a>
+                </li>
+                <li>
+                  <strong>Email:</strong>{' '}
+                  <a href="/#contacto" className="text-primary underline">info@mudanzamarin.com</a>
+                </li>
+                <li>
+                  <strong>Teléfono:</strong>{' '}
+                  <a href="/#contacto" className="text-primary underline">642 431 192</a>
+                </li>
+                <li>
+                  <strong>Sitio web:</strong>{' '}
+                  <a href="/#europa" className="text-primary underline">mudanzamarin.eu</a>
+                </li>
               </ul>
 
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">2. Objeto</h2>

@@ -17,14 +17,14 @@ const Terms = () => {
             <div className="prose prose-lg max-w-none text-foreground">
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">1. Objeto</h2>
               <p>
-                Los presentes términos y condiciones regulan la prestación de servicios de mudanzas nacionales e internacionales por parte de <strong>Mudanzas Marín EU</strong>.
+                Los presentes términos y condiciones regulan la prestación de servicios de mudanzas nacionales e internacionales por parte de <a href="/#inicio" className="text-primary underline">Mudanzas Marín EU</a>.
               </p>
 
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">2. Servicios</h2>
               <p>Ofrecemos los siguientes servicios:</p>
               <ul className="list-disc ml-6 mb-4">
-                <li>Mudanzas nacionales en toda España</li>
-                <li>Mudanzas internacionales en Europa</li>
+                <li>Mudanzas nacionales en toda <a href="/#espana" className="text-primary underline">España</a></li>
+                <li>Mudanzas internacionales en <a href="/#europa" className="text-primary underline">Europa</a></li>
                 <li>Embalaje y desembalaje profesional</li>
                 <li>Transporte seguro y monitoreado</li>
                 <li>Montaje y desmontaje de mobiliario</li>
@@ -69,7 +69,7 @@ const Terms = () => {
 
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">8. Resolución de conflictos</h2>
               <p>
-                Para cualquier incidencia o reclamación, contacte con nosotros en info@mudanzamarin.com o en el teléfono 642 431 192. Nos comprometemos a resolver cualquier problema de forma rápida y satisfactoria.
+                Para cualquier incidencia o reclamación, contacte con nosotros en <a href="/#contacto" className="text-primary underline">info@mudanzamarin.com</a> o en el teléfono <a href="/#contacto" className="text-primary underline">642 431 192</a>. Nos comprometemos a resolver cualquier problema de forma rápida y satisfactoria.
               </p>
 
               <p className="text-sm text-muted-foreground mt-8">

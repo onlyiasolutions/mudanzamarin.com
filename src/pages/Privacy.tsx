@@ -17,9 +17,13 @@ const Privacy = () => {
             <div className="prose prose-lg max-w-none text-foreground">
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">1. Responsable del tratamiento</h2>
               <p>
-                <strong>Mudanzas Marín EU</strong><br/>
-                Email: info@mudanzamarin.com<br/>
-                Teléfono: 642 431 192
+                <strong>
+                  <a href="/#inicio" className="text-primary underline">Mudanzas Marín EU</a>
+                </strong>
+                <br />
+                Email: <a href="/#contacto" className="text-primary underline">info@mudanzamarin.com</a>
+                <br />
+                Teléfono: <a href="/#contacto" className="text-primary underline">642 431 192</a>
               </p>
 
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">2. Finalidades del tratamiento</h2>
@@ -49,7 +53,9 @@ const Privacy = () => {
                 <li>Limitación y oposición a su tratamiento</li>
                 <li>Presentar una reclamación ante la Agencia de Protección de Datos</li>
               </ul>
-              <p>Para ejercer sus derechos, contacte con nosotros en: info@mudanzamarin.com</p>
+              <p>
+                Para ejercer sus derechos, contacte con nosotros en: <a href="/#contacto" className="text-primary underline">info@mudanzamarin.com</a>
+              </p>
 
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">6. Comunicación de datos</h2>
               <p>Sus datos no serán cedidos a terceros salvo obligación legal o para la prestación del servicio contratado.</p>

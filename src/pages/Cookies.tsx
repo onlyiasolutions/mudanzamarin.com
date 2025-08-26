@@ -51,10 +51,18 @@ const Cookies = () => {
               
               <h3 className="text-xl font-semibold text-primary mt-6 mb-3">Configuración del navegador:</h3>
               <ul className="list-disc ml-6 mb-4">
-                <li><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
-                <li><strong>Firefox:</strong> Opciones → Privacidad y seguridad → Cookies</li>
-                <li><strong>Safari:</strong> Preferencias → Privacidad → Cookies</li>
-                <li><strong>Edge:</strong> Configuración → Cookies y permisos del sitio</li>
+                <li>
+                  <a href="/" className="text-primary underline">Chrome</a>: Configuración → Privacidad y seguridad → Cookies
+                </li>
+                <li>
+                  <a href="/#espana" className="text-primary underline">Firefox</a>: Opciones → Privacidad y seguridad → Cookies
+                </li>
+                <li>
+                  <a href="/#europa" className="text-primary underline">Safari</a>: Preferencias → Privacidad → Cookies
+                </li>
+                <li>
+                  <a href="/#faq" className="text-primary underline">Edge</a>: Configuración → Cookies y permisos del sitio
+                </li>
               </ul>
 
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">Cookies de terceros</h2>
@@ -62,8 +70,12 @@ const Cookies = () => {
                 En algunos casos especiales también utilizamos cookies proporcionadas por terceros de confianza. Los detalles de las cookies de terceros se encuentran a continuación:
               </p>
               <ul className="list-disc ml-6 mb-4">
-                <li><strong>Google Analytics:</strong> Nos ayuda a analizar cómo los usuarios utilizan el sitio</li>
-                <li><strong>Redes sociales:</strong> Para funcionalidades de compartir en redes sociales</li>
+                <li>
+                  <a href="/#europa" className="text-primary underline">Google Analytics</a>: Nos ayuda a analizar cómo los usuarios utilizan el sitio
+                </li>
+                <li>
+                  <a href="/#contacto" className="text-primary underline">Redes sociales</a>: Para funcionalidades de compartir en redes sociales
+                </li>
               </ul>
 
               <h2 className="text-2xl font-semibold text-primary mt-8 mb-4">Consentimiento</h2>
