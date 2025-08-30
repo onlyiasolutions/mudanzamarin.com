@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -116,6 +117,11 @@ const QuoteForm = () => {
 
   return (
     <section id="presupuesto" className="section-padding bg-secondary/30">
+      <Helmet>
+        <title>Presupuesto Online | Mudanzas Marín EU</title>
+        <meta name="description" content="Solicita tu presupuesto online con Mudanzas Marín EU. Respuesta en menos de 24 horas. Mudanzas nacionales e internacionales con seguridad y profesionalidad." />
+        <meta name="keywords" content="Presupuesto mudanzas, presupuesto online mudanza, precio mudanza, Mudanzas Marín EU" />
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 animate-fade-up">
           <div className="flex justify-center mb-4">

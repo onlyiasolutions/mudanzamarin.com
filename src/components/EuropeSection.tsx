@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import europeImage from '@/assets/europe-map.jpg';
+import { Helmet } from "react-helmet";
 
 const EuropeSection = () => {
   const serviceTypes = [
@@ -44,6 +45,11 @@ const EuropeSection = () => {
 
   return (
     <section id="europa" className="section-padding bg-secondary/30">
+      <Helmet>
+        <title>Mudanzas a Europa | Mudanzas Marín EU</title>
+        <meta name="description" content="Mudanzas Marín EU gestiona mudanzas internacionales entre España y cualquier país de Europa. Transporte seguro, embalaje profesional y documentación completa." />
+        <meta name="keywords" content="Mudanzas Europa, mudanzas internacionales España Europa, transporte mudanzas Europa, mudanzas internacionales seguras" />
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Helmet } from "react-helmet";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,6 +23,11 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
+      <Helmet>
+        <title>Aviso Legal y Políticas | Mudanzas Marín EU</title>
+        <meta name="description" content="Consulta el aviso legal, términos de servicio, política de privacidad y uso de cookies de Mudanzas Marín EU." />
+        <meta name="keywords" content="Aviso legal mudanzas, términos de servicio mudanzas, política de privacidad Mudanzas Marín, cookies Mudanzas Marín" />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}

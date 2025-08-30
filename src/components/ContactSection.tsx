@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const ContactSection = () => {
@@ -35,6 +36,11 @@ const ContactSection = () => {
 
   return (
     <section id="contacto" className="section-padding bg-secondary/30">
+      <Helmet>
+        <title>Contacto | Mudanzas Marín EU</title>
+        <meta name="description" content="Contacta con Mudanzas Marín EU para tu mudanza nacional o internacional. Teléfono, WhatsApp o email. Respuesta en menos de 24 horas." />
+        <meta name="keywords" content="Contacto Mudanzas Marín, Teléfono mudanzas, WhatsApp mudanzas, Email mudanzas, presupuesto mudanzas" />
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-playfair font-semibold text-primary mb-6">

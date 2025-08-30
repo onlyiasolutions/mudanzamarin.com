@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown, ShieldCheck, Clock, MapPin } from 'lucide-react';
 import heroImage from '@/assets/hero-truck.jpg';
+import { Helmet } from "react-helmet";
 
 const HeroSection = () => {
   const scrollToPresupuesto = () => {
@@ -12,6 +13,11 @@ const HeroSection = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28">
+      <Helmet>
+        <title>Mudanzas Nacionales e Internacionales | Mudanzas Marín EU</title>
+        <meta name="description" content="Mudanzas Marín EU ofrece mudanzas nacionales e internacionales con confianza, seguridad y más de 20 años de experiencia. Presupuesto gratis en menos de 24h." />
+        <meta name="keywords" content="Mudanzas nacionales, Mudanzas internacionales, Mudanzas Marín EU, empresa de mudanzas España, mudanzas seguras, mudanzas rápidas" />
+      </Helmet>
       {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Helmet } from "react-helmet";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,11 @@ const Navigation = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Navegación | Mudanzas Marín EU</title>
+        <meta name="description" content="Navega fácilmente por Mudanzas Marín EU: Inicio, España, Europa, Preguntas Frecuentes, Presupuesto y Contacto. Acceso rápido a toda la información de mudanzas." />
+        <meta name="keywords" content="Navegación Mudanzas Marín, menú mudanzas, secciones mudanzas, acceso rápido mudanzas" />
+      </Helmet>
       {/* Top bar */}
       <div className="bg-primary text-primary-foreground py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">

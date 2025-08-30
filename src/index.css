@@ -96,6 +96,30 @@ All colors MUST be HSL.
     @apply bg-background text-foreground scroll-smooth;
   }
   
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: hsl(var(--foreground));
+  }
+
+  p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+    color: hsl(var(--foreground) / 0.9);
+  }
+
+  a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    transition: var(--transition-smooth);
+  }
+
+  a:hover {
+    color: hsl(var(--accent));
+  }
+  
   /* Glass morphism utilities */
   .glass {
     background: var(--gradient-glass);

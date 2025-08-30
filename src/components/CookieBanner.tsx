@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Cookie, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Helmet } from "react-helmet";
 
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,6 +46,12 @@ const CookieBanner = () => {
   if (!isVisible) return null;
 
   return (
+    <>
+      <Helmet>
+        <title>Política de Cookies | Mudanzas Marín EU</title>
+        <meta name="description" content="Lee la política de cookies de Mudanzas Marín EU. Conoce cómo usamos cookies esenciales, funcionales y analíticas para mejorar tu experiencia en nuestro sitio web." />
+        <meta name="keywords" content="Política de cookies Mudanzas Marín, cookies esenciales, cookies analíticas, cookies funcionales, consentimiento cookies" />
+      </Helmet>
     <div className="fixed inset-0 z-50 flex items-end justify-center p-4 bg-black/50 animate-fade-in">
       <div className="glass-accent max-w-2xl w-full rounded-2xl shadow-elegant animate-fade-up">
         {!showSettings ? (
@@ -174,6 +181,7 @@ const CookieBanner = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

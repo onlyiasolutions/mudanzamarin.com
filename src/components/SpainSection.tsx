@@ -1,6 +1,7 @@
 import React from 'react';
 import { Truck, Package, Shield, Clock, Users, CheckCircle } from 'lucide-react';
 import spainImage from '@/assets/spain-moving.jpg';
+import { Helmet } from "react-helmet";
 
 const SpainSection = () => {
   const services = [
@@ -50,6 +51,11 @@ const SpainSection = () => {
 
   return (
     <section id="espana" className="section-padding bg-background">
+      <Helmet>
+        <title>Mudanzas en España | Mudanzas Marín EU</title>
+        <meta name="description" content="Mudanzas nacionales en toda España con Mudanzas Marín EU. Transporte seguro, embalaje profesional y servicio adaptado a tus necesidades en cualquier ciudad o comunidad autónoma." />
+        <meta name="keywords" content="Mudanzas España, mudanzas nacionales, mudanzas en Madrid, mudanzas en Barcelona, mudanzas por carretera, Mudanzas Marín EU" />
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Content */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import {
   Accordion,
   AccordionContent,
@@ -53,6 +54,11 @@ const FAQSection = () => {
 
   return (
     <section id="faqs" className="section-padding bg-background">
+      <Helmet>
+        <title>Preguntas Frecuentes | Mudanzas Marín EU</title>
+        <meta name="description" content="Preguntas frecuentes sobre Mudanzas Marín EU: servicios, presupuestos, cobertura en España y Europa, garantías, tiempos de mudanza y más." />
+        <meta name="keywords" content="Preguntas frecuentes mudanzas, FAQ Mudanzas Marín, dudas mudanzas nacionales internacionales, garantías mudanzas" />
+      </Helmet>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 animate-fade-up">
           <div className="flex justify-center mb-4">

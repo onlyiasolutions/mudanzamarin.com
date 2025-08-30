@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { Award, Users, Truck, Heart } from 'lucide-react';
 
 const AboutSection = () => {
@@ -30,6 +31,11 @@ const AboutSection = () => {
 
   return (
     <section id="sobre-nosotros" className="section-padding bg-background">
+      <Helmet>
+        <title>Sobre Nosotros | Mudanzas Marín EU</title>
+        <meta name="description" content="Conoce la historia, valores y compromiso de Mudanzas Marín EU. Más de 20 años ofreciendo mudanzas nacionales e internacionales con confianza, profesionalidad y seguridad." />
+        <meta name="keywords" content="Sobre Mudanzas Marín, Historia Mudanzas Marín EU, valores mudanzas, confianza profesionalidad seguridad" />
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
